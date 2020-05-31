@@ -1,3 +1,25 @@
+/*
+Title: Assignment 1.5
+Date: 31 May 2020
+
+Anil Rayamajhi
+Description: Types, Values, and Variables
+*/
+
+/*
+Create 3 employee records with the following fields (this means there should be 3 firstName variables, 3 lastName variables, 3 address variables, 3 payRate variables, and 3 hireDate variables)
+    firstName
+    lastName
+    address
+    payRate
+    hireDate
+Format the payRate to one decimal place (see page 48 of the courses textbook)
+Format the hireDate using "slashes" (see page 35 of the courses textbook; use JavaScript's built-in new Date() object)
+Run and test the program and make sure the output matches what I have 
+When you are happy with the output stage, commit, and push your work to GitHub
+*/
+
+// Employee One
 var personOneFirstName;
 personOneFirstName = "Cody";
 console.log(personOneFirstName);
@@ -21,6 +43,7 @@ console.log(personOneFormattedHireDate.toLocaleDateString());
 
 console.log("\n*************************");
 
+// Employee Two
 var personTwoFirstName;
 personTwoFirstName = "Liam";
 console.log(personTwoFirstName);
@@ -44,6 +67,7 @@ console.log(personTwoFormattedHireDate.toLocaleDateString());
 
 console.log("\n*************************");
 
+// Employee Three
 var personThreeFirstName;
 personThreeFirstName = "Tmethy";
 console.log(personThreeFirstName);
