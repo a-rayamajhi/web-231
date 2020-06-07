@@ -12,7 +12,7 @@
   I am <your actual age - parsed int value> years old and my savings account goal is <your actual goal - parsed float value> dollars.
 
 
-  Execute: `node week-2/finished-code/rayamajhi-assignment-2.4.js`
+  Execute: `node rayamajhi-assignment-2.4.js`
 */
 
 /**
@@ -37,16 +37,12 @@ console.log("Full Name: ", fullName);
  * Description: Returns a well-formatted date based off of parameters
  */
 function dateWriter(year, month, day) {
-  var date = new Date(year, month - 1, day).toLocaleDateString("en-US");
+  var date = new Date(year, month, day).toLocaleDateString("en-US");
   return date;
 }
 
 var date = new Date();
-var todayDate = dateWriter(
-  date.getFullYear(),
-  date.getMonth() + 1,
-  date.getDate()
-);
+var todayDate = dateWriter(date.getFullYear(), date.getMonth(), date.getDate());
 console.log("Today's Date: ", todayDate);
 
 /**

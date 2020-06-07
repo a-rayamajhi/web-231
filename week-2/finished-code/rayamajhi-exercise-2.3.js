@@ -10,7 +10,7 @@
   Hint: Use your personal header display function and
   refer to page 178 for implementing function properties
 
-  Execute: `node week-2/finished-code/exercise-2.3.js`
+  Execute: `node exercise-2.3.js`
 */
 
 // function property
