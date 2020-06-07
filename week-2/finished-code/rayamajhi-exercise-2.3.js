@@ -1,5 +1,4 @@
 /*
-  Expected output:
 
   Anil Rayamajhi
   Exercise 2.3
