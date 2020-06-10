@@ -1,10 +1,12 @@
 /*
 ============================================
-; Title:  3.1 Control Statements - Two Errors
+; Discussion Board 3.1 - Control Statements
 ; Author: Anil Rayamajhi
 ; Date:   9 June 2020
 ; Modified by: <  >
-; Description: Switch Case Control Statement with Two Errors
+;
+;
+; Description: Snippet below has two errors, feel free to refer hint
 ;===========================================
 */
 
