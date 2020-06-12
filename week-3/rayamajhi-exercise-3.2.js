@@ -1,6 +1,6 @@
 /*
 ============================================
-; Discussion Board 3.2 - Pattern Matching Functions
+; Exercise 3.2 - Pattern Matching Functions
 ; Author: Anil Rayamajhi
 ; Date:   11 June 2020
 ;

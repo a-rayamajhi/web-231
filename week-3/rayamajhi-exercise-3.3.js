@@ -1,6 +1,6 @@
 /*
 ============================================
-; Discussion Board 3.2 - Control Statements
+; Exercise 3.3 - Control Statements
 ; Author: Anil Rayamajhi
 ; Date:   11 June 2020
 ;

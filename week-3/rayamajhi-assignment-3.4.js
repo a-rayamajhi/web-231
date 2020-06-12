@@ -1,6 +1,6 @@
 /*
 ============================================
-; Discussion Board 3.4 - Loops
+; Assignment 3.4 - Loops
 ; Author: Anil Rayamajhi
 ; Date:   11 June 2020
 ;
