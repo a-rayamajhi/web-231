@@ -13,18 +13,18 @@
 
 /*
 Deliverable:
-1 and 2 did not match
-Cristy and Cristy matched
-Cross and 3 did not match
+  Truck and Car do not match!
+  Bike and Bike do match!
+  Four and Three do not match!
 */
 
 //Variable Declaration
-var varOne = 1,
-  varTwo = 2,
-  varThree = "3",
-  varFour = "Cristy",
-  varFive = "Cross",
-  varSix = "Cristy";
+var varOne = "Truck",
+  varTwo = "Car",
+  varThree = "Four",
+  varFour = "Bike",
+  varFive = "Three",
+  varSix = "Bike";
 
 /**
  * Params: parameterOne, parameterTwo
@@ -47,7 +47,7 @@ function match(parameterOne, parameterTwo) {
  * Description: logger for matched result
  */
 function logMatch(parameterOne, parameterTwo) {
-  console.log(`${parameterOne} and ${parameterTwo} matched`);
+  console.log(`${parameterOne} and ${parameterTwo} do matched!`);
 }
 // test invoke
 console.log(`\n****Test Match****`);
@@ -63,7 +63,7 @@ console.log("\n");
  * Description: logger for mismatched result
  */
 function logMismatch(parameterOne, parameterTwo) {
-  console.log(`${parameterOne} and ${parameterTwo} did not match`);
+  console.log(`${parameterOne} and ${parameterTwo} do not match!`);
 }
 // test invoke
 console.log(`****Test Mismatch****`);

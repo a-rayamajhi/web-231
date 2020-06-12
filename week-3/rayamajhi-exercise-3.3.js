@@ -10,13 +10,31 @@
 ;===========================================
 */
 
+/**
+Usage of if statement
+
+let eventKeyCode = 13
+
+if (eventKeyCode === 13) {
+  console.log('The enter key was pressed.')
+} else if (eventKeyCode === 16) {
+  console.log('The shift key was pressed.')
+} else if (eventKeyCode === 32) {
+  console.log('The spacebar key was pressed.')
+} else if (eventKeyCode === 8) {
+  console.log('The backspace / delete key was pressed.')
+} else {
+  console.log('Unrecognized key.')
+}
+ */
+
 /*
 Deliverable:
-JavaScript Rocks!
+The enter key was pressed.
 */
 
 //Variable Declaration
-var programmingLanguage = "JavaScript";
+var programmingLanguage = 13;
 
 /**
  * Params: parameter
@@ -25,22 +43,23 @@ var programmingLanguage = "JavaScript";
  * Description: logger
  */
 function loggerFunction(parameter) {
-  console.log(`\n*******${parameter} Rocks!*******\n`);
+  console.log(`The ${parameter} key was pressed.`);
 }
 
 switch (programmingLanguage) {
-  case "php":
-    loggerFunction("php");
+  case 13:
+    loggerFunction("enter");
     break;
-  case "Go":
-    loggerFunction("Go");
+  case 16:
+    loggerFunction("shift");
     break;
-  case "JavaScript":
-    loggerFunction("JavaScript");
+  case 32:
+    loggerFunction("spacebar");
     break;
-  case "Elixir":
-    loggerFunction("Elixir");
+  case 8:
+    loggerFunction("backspace / delete");
     break;
   default:
+    console.log("Unrecognized key.");
     break;
 }
