@@ -13,7 +13,7 @@ console.log(
   header.display("Anil", "Rayamajhi", "Discussion Board 4.1 - Arrays")
 );
 
-console.log("\n");
+console.log("---\n");
 
 /*
 Deliverable:
@@ -21,6 +21,7 @@ Deliverable:
 */
 
 //  Declare array
+// Set size to numArray
 //  HINT: https://github.com/buwebdev/web-231/blob/master/week-4/arrays-and-operators.js
 const numArray = new Array[10](),
   payload = [];
