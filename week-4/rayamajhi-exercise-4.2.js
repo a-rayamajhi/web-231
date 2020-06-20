@@ -21,7 +21,6 @@
 */
 
 // Add Header
-
 var header = require("../header.js");
 
 console.log(header.display("Anil", "Rayamajhi", "Exercise 4.2 - Array"));
