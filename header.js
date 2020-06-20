@@ -1,7 +1,7 @@
 /*
 ============================================
 ; Title:  header.js
-; Author: Professor Krasso 
+; Author: Professor Krasso
 ; Date:   25 June 2017
 ; Description: Displays a formatted header
 ;===========================================
@@ -13,8 +13,19 @@
  * Description: Returns a well-formatted string header
  */
 exports.display = function (firstName, lastName, assignment) {
-  let output = '\n' + firstName + ' ' + lastName + '\n' + assignment + '\nDate: ' +
-    new Date().toLocaleDateString()
+  let output =
+    "\n" +
+    firstName +
+    " " +
+    lastName +
+    "\n" +
+    assignment +
+    "\nDate: " +
+    new Date().toLocaleDateString("default", {
+      year: "numeric",
+      month: "long",
+      day: "numeric",
+    });
 
-  return output
-}
+  return output;
+};
