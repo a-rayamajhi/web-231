@@ -2,8 +2,10 @@
 ============================================
 ; Title:  Discussion Board 5.1 - Advanced Arrays
 ; Professor Cross
-; Date:   17 June 2020
+; Date:   25 June 2020
 ; Author: Anil Rayamajhi
+; Modified By: {name}
+;
 ; Description: JavaScript program with bugs
 ;===========================================
 */
