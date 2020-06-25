@@ -10,7 +10,7 @@
 
 var header = require("../header.js");
 console.log(
-  header.display("Anil", "Rayamajhi", "Discussion Board 4.1 - Arrays")
+  header.display("Anil", "Rayamajhi", "Discussion Board 5.1 - Advanced Arrays")
 );
 
 console.log("---\n");
