@@ -17,6 +17,8 @@ console.log(
 console.log("*****************\n");
 
 /*
+  Expected output:
+
   FirstName LastName
   Assignment 6.4
   Today's Date
@@ -42,7 +44,7 @@ var todaysDate = new Date().toLocaleDateString("default", {
     },
 
     get stringOutput() {
-      const { person } = this;
+      const person = this.person;
       return `${this.name} was created on ${this.dateCreated} and assigned to employee ${person["firstName"]} ${person["lastName"]} (${person.jobTitle})`;
     },
   };
