@@ -1,0 +1,52 @@
+<!--
+============================================
+; Title:  Discussion Board 7.1 - JavaScript in Web Browsers
+; Professor Cross
+; Date:   6 July 2020 (PST)
+; Author: Anil Rayamajhi
+; Modified By: {name}
+;
+; Description: A program with errors
+;===========================================
+ -->
+
+<!--
+  Expected Outputs
+  -
+
+  California - CA
+  Nevada - NV
+  Arizona - AZ
+  Nebraska - NE
+  Maine - ME
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Discussion Board 7.1 - JavaScript in Web Browsers</title>
+  </head>
+  <body>
+    <h2>Discussion Board 7.1</h2>
+    <h3>JavaScript in Web Browsers</h3>
+
+    <div id="states"></div>
+    <script>
+      var states = {
+        California: "CA",
+        Nevada: "NV",
+        Arizona: "AZ",
+        Nebraska: "NE",
+        Maine: "ME",
+      };
+
+      var listItems = Object.keys(states).map(
+        (state, abbr) => `<li>${state}  -  ${states["state"]}</li>`
+      );
+      var element = "<ul>" + listItems.join("") + "</ul>";
+
+      document.getElement("states").innerText = element;
+    </script>
+  </body>
+</html>
