@@ -1,0 +1,53 @@
+<!--
+============================================
+; Title:  Exercise 7.3 - Client-Side JavaScript
+; Professor Cross
+; Date:   7 July 2020 (PST)
+; Author: Anil Rayamajhi
+;===========================================
+ -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Exercise 7.3</title>
+
+    <!-- you will need to the href to point to your root directories css file -->
+    <link rel="stylesheet" href="../site.css" />
+  </head>
+  <body>
+    <h1>SHOPPING LIST v.1</h1>
+    <script>
+      var fruits = ["Oranges", "Apples", "Pears", "Limes", "Lemons"];
+
+      var listItems = fruits.map((fruit) => `<li>${fruit}</li>`);
+
+      document.write("<ol>" + listItems.join("") + "</ol>");
+    </script>
+
+    <h1>SHOPPING LIST v.2</h1>
+    <div id="list"></div>
+    <script>
+      var tableItems = fruits.map(
+        (fruit, index) => `<tr>
+        <td>${++index}</td>
+        <td>${fruit}</td>
+        </tr>`
+      );
+
+      document.getElementById("list").innerHTML =
+        "<table>" +
+        "<thead>" +
+        "<tr>" +
+        "<th>Id</th>" +
+        "<th>Item</th>" +
+        "</tr>" +
+        "</thead>" +
+        "<tbody>" +
+        tableItems.join("") +
+        "</tbody>" +
+        "</table>";
+    </script>
+  </body>
+</html>

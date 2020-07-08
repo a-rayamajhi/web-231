@@ -1,0 +1,65 @@
+<!--
+============================================
+; Title:  Assignment 7.4 - Inline JavaScript Functions
+; Professor Cross
+; Date:   7 July 2020 (PST)
+; Author: Anil Rayamajhi
+;===========================================
+ -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Assignment 7.4 - Inline JavaScript Functions</title>
+
+    <!-- you will need to the href to point to your root directories css file -->
+    <link rel="stylesheet" href="../site.css" />
+  </head>
+  <body>
+    <h1>Computer Components</h1>
+    <div id="table"></div>
+  </body>
+  <script>
+    var id = 1;
+    function Component(name, amount) {
+      this.id = id++;
+      this.name = name;
+      this.amount = amount;
+    }
+
+    var components = [
+      new Component("Laptop", "1,500.99"),
+      new Component("Motherboard", "35.70"),
+      new Component("Monitor", "174.99"),
+      new Component("Mouse", "13.99"),
+      new Component("Keyboard", "14.50"),
+    ];
+
+    var tableItems = components.map((component, index) => {
+      const { name, amount } = component;
+
+      return `<tr>
+        <td>${++index}</td>
+        <td>${name}</td>
+        <td>${amount}</td>
+        <td><a href="javascript:alert(${index});">EDIT</a> | <a href="#" onclick="confirm('Are you sure?')";>DELETE</a></td>
+        </tr>`;
+    });
+
+    document.getElementById("table").innerHTML =
+      "<table>" +
+      "<thead>" +
+      "<tr>" +
+      "<th>Id</th>" +
+      "<th>Name</th>" +
+      "<th>Amount</th>" +
+      "<th>Functions</th>" +
+      "</tr>" +
+      "</thead>" +
+      "<tbody>" +
+      tableItems.join("") +
+      "</tbody>" +
+      "</table>";
+  </script>
+</html>
