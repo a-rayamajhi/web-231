@@ -1,0 +1,33 @@
+<!--
+ 	============================================
+ 	; Title: Find errors
+ 	; Author: Marie Nicole Barleta
+ 	; Date: 07 09 2020
+ 	; Modified by: Anil Rayamajhi
+ 	; Description: Find errors with Client-Side JavaScript
+ 	;===========================================
+ 	-->
+
+<html>
+  <head>
+    <script>
+      function enterName() {
+        var userName = document.getElementsByClassName("nameInput")[0].value;
+
+        document.getElementsByName("showHeader")[0].innerText = userName;
+      }
+    </script>
+  </head>
+
+  <body>
+    <input
+      type="input"
+      maxlength="20"
+      class="nameInput"
+      onkeyup="enterName()"
+      placeholder="Enter your name:"
+    />
+
+    <h1 name="showHeader"></h1>
+  </body>
+</html>
