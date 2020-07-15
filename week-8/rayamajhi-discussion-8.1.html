@@ -1,0 +1,116 @@
+<!--
+============================================
+; Title:  Discussion Board 8.1 - DOM Manipulation (JQuery)
+; Professor Cross
+; Date:   14 July 2020 (PST)
+; Author: Anil Rayamajhi
+; Modified By: {name}
+;
+; Description: Program has two errors
+;===========================================
+ -->
+
+<!--
+  Expected Outputs
+  -
+
+  Background Color Should Change
+  on clicking color box
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Discussion Board 8.1 - DOM Manipulation (JQuery)</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <style type="text/css">
+      body {
+        font-size: 15px;
+        font-family: monospace;
+      }
+      .heading {
+        font-weight: 600;
+      }
+      .h3 {
+        font-size: 21px;
+      }
+      .h2 {
+        font-size: 30px;
+      }
+      tr > td:first-child {
+        cursor: pointer;
+        font-size: 0;
+        border: 1px solid #383838;
+      }
+      tr > td,
+      tr > th {
+        padding: 1em;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="heading">Discussion Board 8.1</div>
+    <div class="heading h2">DOM Manipulation (JQuery)</div>
+    <div class="heading h3">Anil Rayamajhi</div>
+
+    <br />
+    <br />
+
+    <div class="heading h3">Set Background with Google Colors</div>
+    <div class="heading">Click on color to change background</div>
+    <br />
+
+    <div id="colors"></div>
+    <script type="text/javascript">
+      $(function () {
+        function Color(name, hex) {
+          this.name = name;
+          this.hex = hex;
+        }
+
+        var colors = [
+          new Color("White", "#FFFFFF"),
+          new Color("Blue", "#4285f4"),
+          new Color("Green", "#34a853"),
+          new Color("Red", "#ea4335"),
+          new Color("Yellow", "#fbbc05"),
+        ];
+
+        var tableItems = colors.map((color) => {
+          const { id, name, hex } = color;
+          return `<tr>
+                    <td style="background-color: ${hex}">${hex}</td>
+                    <td>${name}</td>
+                    </tr>`;
+        });
+
+        var output =
+          "<table>" +
+          "<thead>" +
+          "<tr>" +
+          "<th>Color</th>" +
+          "<th>Name</th>" +
+          "</tr>" +
+          "</thead>" +
+          "<tbody>" +
+          tableItems.join("") +
+          "</tbody>" +
+          "</table>";
+
+        $("#colors").html(output);
+
+        //HINT: css JQuery
+        function setColor(color) {
+          $("body").color("backgroundColor", color);
+        }
+
+        $("table tr").click(function () {
+          var hex = $(this).find("td:first").innerHTML;
+
+          setColor(hex);
+        });
+      });
+    </script>
+  </body>
+</html>

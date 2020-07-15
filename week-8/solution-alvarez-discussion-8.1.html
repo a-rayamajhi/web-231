@@ -1,0 +1,53 @@
+<!--
+============================================
+; Title:  Discussion Board
+; Author: Karina Alvarez
+; Date: 14 July 2020
+; Modified by: Anil Rayamajhi
+; Description: create a simple HTML page
+; with at least (2) jQuery errors
+;===========================================
+-->
+
+<!--Output should be as follow:
+; Discussion Board 8.1 - DOM Manipulation (JQuery)
+; Karina Alvarez
+; July 14, 2020
+; **When 'Click me' button is clicked**
+; **'Karina Alvarez' should hide**-->
+
+<!--Four (4) error in program-->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Alvarez Discussion Board 8.1</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script>
+      // a function for when a button is clicked
+      // the paragraph with a class of myName will hide
+      //two error bellow
+      $(document).ready(function () {
+        $("button").click(function () {
+          $("p.myname").hide();
+        });
+      });
+    </script>
+  </head>
+
+  <body>
+    <!--Two errors bellow-->
+    <h3 class="assignmentName">
+      Discussion Board 8.1 - DOM Manipulation (JQuery)
+    </h3>
+
+    <p class="myname">Karina Alvarez</p>
+    <p class="date">July 14, 2020</p>
+    <p>
+      <button>Click me</button>
+    </p>
+  </body>
+</html>
