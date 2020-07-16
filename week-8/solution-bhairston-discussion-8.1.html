@@ -1,0 +1,71 @@
+<!--
+ 	============================================
+ 	; Title: hairston-discussion-8-1.html
+ 	; Author: Brooklyn Hairston
+ 	; Date: 15 July 2020 (PST)
+ 	; Modified by: Anil Rayamajhi
+ 	; Description: Program using JQuery with multiple errors
+ 	;===========================================
+ 	*/
+ 	-->
+
+<!-- Program with multiple errors
+ 	 Output: Form fields turn yellow when it gets focus. When button is pressed form disappears and heading changes to Thank You!-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Discussion 8.1</title>
+
+    <script>
+      //header
+      const header = require("../hairston-header.js");
+      console.log(header.display("Brooklyn", "Hairston", "Discussion"));
+    </script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <style type="text/css">
+      label {
+        display: inline-block;
+        width: 100px;
+        text-align: left;
+      }
+
+      input {
+        display: inline-block;
+        width: 100px;
+      }
+    </style>
+    <script>
+      //multiple errors below
+      $("button").click(function () {
+        $(".form").hide();
+      });
+
+      $(document).ready(function () {
+        $("input").focus(function () {
+          $(this).css("background-color", "yellow");
+        });
+      });
+
+      function changeHeader() {
+        document.getElementById("book").innerHTML = "Thank You!";
+      }
+    </script>
+  </head>
+  <body>
+    <h1 id="book">What's Your Favorite Book?</h1>
+
+    <form>
+      <label for="title">Title:</label>
+      <input type="text" id="title" name="title" /><br />
+      <label for="author">Author:</label>
+      <input type="text" id="author" name="author" /><br />
+    </form>
+
+    <br />
+    <button onclick="changeHeader()">Submit</button>
+  </body>
+</html>
