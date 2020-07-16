@@ -1,0 +1,73 @@
+<!--
+
+============================================
+
+; Title: discussion 8.1
+
+; Author: Tiffany Baker
+
+; Date:07/15/2020
+
+; Modified By:
+
+; Description: website that displays greeting.
+
+; 2 errors
+
+;===========================================
+
+-->
+
+<script>
+  const header = require("../baker-header.js");
+
+  console.log(header.display("Tiffany", "Baker", "discussion"));
+
+  console.log("");
+</script>
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <title>Greet</title>
+
+    <link rel="stylesheet" href="#" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script>
+      $(document).ready(function () {
+        $("#hide").click(function () {
+          $("#main").show();
+        });
+      });
+    </script>
+
+    <style>
+      #hide {
+        background-color: blueviolet;
+
+        color: white;
+
+        font-size: large;
+      }
+
+      #main {
+        font-size: large;
+
+        font-weight: bold;
+
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <button id="hide">Hello</button>
+
+    <p id="main">Goodbye!</p>
+  </body>
+</html>
