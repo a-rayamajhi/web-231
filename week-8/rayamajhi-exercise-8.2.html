@@ -1,0 +1,91 @@
+<!--
+============================================
+; Title:  Dynamic HTML
+; Author: Professor Cross
+; Date:   18 July 2020
+: Modified by: Anil Rayamajhi
+; Description: Dynamic HTML
+;===========================================
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Exercise 8.2</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap"
+      rel="stylesheet"
+    />
+    <style type="text/css">
+      body {
+        font-family: "Roboto", sans-serif;
+        margin: 0;
+      }
+      .topbar {
+        background-color: aliceblue;
+        font-weight: 400;
+        height: 50px;
+        text-align: center;
+      }
+      ul {
+        margin-top: 20px;
+        list-style: none;
+        margin: 0 auto;
+        font-weight: 300;
+        width: fit-content;
+      }
+      h2 {
+        font-weight: 500;
+        font-size: 30px;
+        text-align: center;
+      }
+      .container {
+        padding: 10px 15px;
+      }
+      .topbar a {
+        padding-left: 20px;
+        padding-right: 20px;
+        color: black;
+        text-decoration: none;
+        line-height: 3;
+        text-transform: uppercase;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="topbar">
+      <a href="#">home</a>
+      <a href="#">Page</a>
+    </div>
+
+    <div class="container">
+      <h2>Fruits</h2>
+      <div id="fruits"></div>
+    </div>
+
+    <script>
+      var id = 1;
+      function Fruit(type) {
+        this.id = id++;
+        this.type = type;
+      }
+
+      var fruitsArray = ["Oranges", "Apples", "Pears", "Limes", "Lemons"];
+
+      var fruits = fruitsArray.map((fruit) => new Fruit(fruit));
+
+      console.log(fruits);
+
+      var out = "<ul>";
+
+      for (var x = 0; x < fruits.length; x++) {
+        out += "<li>" + fruits[x]["id"] + " " + fruits[x]["type"] + "</li>";
+      }
+
+      out += "</ul>";
+
+      document.getElementById("fruits").innerHTML = out;
+    </script>
+  </body>
+</html>

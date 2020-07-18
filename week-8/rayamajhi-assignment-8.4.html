@@ -1,0 +1,103 @@
+<!--
+============================================
+; Title:  Putting it all together
+; Author: Professor Cross
+; Date:   18 July 2020
+: Modified by: Anil Rayamajhi
+;===========================================
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Assignment 8.4 - Putting it all together</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- you will need to the href to point to your root directories css file -->
+    <link rel="stylesheet" href="../site.css" />
+
+    <style type="text/css">
+      #emps tbody tr:hover {
+        cursor: pointer;
+        background-color: #ffff99;
+      }
+      tr > td,
+      tr > th {
+        padding: 0.5em 2em;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="emps"></div>
+
+    <script type="text/javascript">
+      // jQuery onClick event
+      // Don't remove this, just add your code to the body of the event (curly braces)
+      $(function () {
+        var id = 1;
+        function Employee(firstName, lastName, title) {
+          this.id = id++;
+          this.firstName = firstName;
+          this.lastName = lastName;
+          this.title = title;
+        }
+
+        var employees = [
+          new Employee("Thomas", "Edison", "Software Engineer"),
+          new Employee("Benjamin", "Franklin", "Programmer"),
+          new Employee("Nikola", "Tesla", "Project Manager"),
+          new Employee("Charles", "Babbage", "Product Manager"),
+          new Employee("Alexander", "Bell", "Business Analyst"),
+        ];
+
+        function getEmployee(id) {
+          var employeeFilter = employees.filter((el) => {
+            if (el.id == id) {
+              return el;
+            }
+          });
+          employeeFilter.length ? puke(employeeFilter[0]) : null;
+        }
+
+        function puke(employee) {
+          alert(JSON.stringify(employee, null, " "));
+        }
+
+        var tableItems = employees.map((employee, index) => {
+          const { id, firstName, lastName, title } = employee;
+          return `<tr>
+                    <td>${id}</td>
+                    <td>${firstName}</td>
+                    <td>${lastName}</td>
+                    <td>${title}</td>
+                    </tr>`;
+        });
+
+        var output =
+          "<table>" +
+          "<thead>" +
+          "<tr>" +
+          "<th>Id</th>" +
+          "<th>First Name</th>" +
+          "<th>Last Name</th>" +
+          "<th>Title</th>" +
+          "</tr>" +
+          "</thead>" +
+          "<tbody>" +
+          tableItems.join("") +
+          "</tbody>" +
+          "</table>";
+
+        $("#emps").html(output);
+
+        $("table tr").click(function () {
+          var id = $(this).find("td:first").html();
+
+          getEmployee(parseInt(id));
+        });
+      });
+    </script>
+  </body>
+</html>
